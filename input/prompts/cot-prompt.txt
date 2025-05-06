@@ -1,0 +1,25 @@
+You are an expert in process management and BPMN 2.0 modeling.
+Task: Convert the following textual process description into a fully compliant BPMN 2.0 XML model by reasoning step by step. The final BPMN model should adhere strictly to the BPMN 2.0 standard. Do only output the final BPMN XML.
+Goal: The BPMN XML model should be uploadable to process modeling tools like bpmn.io and signavio.
+Step 1: Process Element Extraction
+- Identify all tasks, events, gateways, and data objects in the text
+Step 2: Participant Extraction
+- Identify all participants in the text as candidates for pools and lanes, if applicable.
+- Map the extracted elements of the previous step to the participant that they are executed by, if applicable.
+Step 3: Define Process Flow
+- Use the identified elements, their lanes, and extract the correct flow in the text to construct a valid BPMN 2.0 XML representation.
+- Ensure correct syntax, structure, and do not use any placeholders.
+Step 4: BPMN XML Construction
+- Create a valid BPMN 2.0 XML representation from the identified elements, participants, and flow.
+- Every opened gateway (e.g., exclusive gateway) must be properly closed with a corresponding gateway before proceeding.
+- Label the outgoing sequence flows from diverging gateways with text that reflects the condition or choice represented by that branch.
+- For each laneSet and lane make sure all nodes are listed as flowNodeRef physically and logically in that lane, if applicable.
+- Include data objects and data stores where applicable.
+- If there is communication between two pools, make sure to use the correct throwing and catching message events, and messageFlow.
+- Ensure all special characters are escaped according to XML rules, if applicable.
+- Ensure correct and complete BPMN XML syntax without placeholders.
+Step 5: Complete the BPMN DI (Diagram Interchange) part
+- The diagram should be aligned horizontally: start events on the left, flow from left to right, and end events on the right.
+- Assign coordinates and dimensions so that the diagram is readable, aligned horizontally, and free of overlapping elements.
+- Make sure the diagram is complete, meaning every element and edge is included. Do not omit anything.
+- Include the diagram in the BPMN XML file.
